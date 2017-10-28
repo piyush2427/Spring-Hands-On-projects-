@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" "http://www.springframework.org/dtd/spring-beans-2.0.dtd" [
+<!ENTITY contextInclude SYSTEM "org/springframework/web/context/WEB-INF/contextInclude.xml">
+]>
+<beans>
+	<bean id="proList" 
+	class="com.tech.infrasoft.collectiondemo.util.ProductCollection">
+		<property name="pro">
+			<list>
+				<ref bean="pro1"></ref>
+				<ref bean="pro2"></ref>
+				<ref bean="pro3"></ref>
+			</list>
+		</property>
+	</bean>
+	<bean id="pro1" class="com.tech.infrasoft.bean.Product">
+		<property name="id" value="101"></property>
+		<property name="pname" value="Tv"></property>
+		<property name="price" value="100079.99"></property>
+	</bean>
+	<bean id="pro2" class="com.tech.infrasoft.bean.Product">
+		<property name="id" value="102"></property>
+		<property name="pname" value="Fridge"></property>
+		<property name="price" value="20079"></property>
+	</bean>
+	<bean id="pro3" class="com.tech.infrasoft.bean.Product">
+		<property name="id" value="103"></property>
+		<property name="pname" value="Ac"></property>
+		<property name="price" value="50079"></property>
+	</bean>
+
+</beans>

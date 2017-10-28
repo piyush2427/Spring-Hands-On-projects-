@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" "http://www.springframework.org/dtd/spring-beans-2.0.dtd" [
+<!ENTITY contextInclude SYSTEM "org/springframework/web/context/WEB-INF/contextInclude.xml">
+]>
+<beans>
+
+	<bean id="line1" class="com.pragatisoftware.bean.Line" autowire="byName">
+
+	</bean>
+
+	<bean id="pointA" class="com.pragatisoftware.bean.Point">
+		<property name="x" value="10"></property>
+		<property name="y" value="10"></property>
+	</bean>
+
+
+	<bean id="pointB" class="com.pragatisoftware.bean.Point">
+		<property name="x" value="30"></property>
+		<property name="y" value="30"></property>
+	</bean>
+
+	<bean id="circle" class="com.pragatisoftware.bean.Circle">
+		<property name="center" ref="pointA"></property>
+	</bean>
+	<bean
+		class="org.springframework.beans.factory.annotation.RequiredAnnotationBeanPostProcessor"></bean>
+</beans> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" "http://www.springframework.org/dtd/spring-beans-2.0.dtd" [
+<!ENTITY contextInclude SYSTEM "org/springframework/web/context/WEB-INF/contextInclude.xml">
+]>
+<beans>
+	<bean id="empList" 
+	class="com.tech.infrasoft.util.EmployeeCollection">
+		<property name="emps">
+			<list>
+				<ref bean="emp1"></ref>
+				<ref bean="emp2"></ref>
+				<ref bean="emp3"></ref>
+			</list>
+		</property>
+	</bean>
+	<bean id="emp1" class="com.pragatisoftware.bean.Employee">
+		<property name="empId" value="101"></property>
+		<property name="empName" value="Rajesh Shastri"></property>
+		<property name="address" ref="addressRef1"></property>
+	</bean>
+	<bean id="addressRef1" class="com.pragatisoftware.bean.Address">
+		<property name="line1" value="Xyz complex , opposite Star Mall"></property>
+		<property name="line2" value="LBS Marg"></property>
+		<property name="city" value="Bandra"></property>
+		<property name="state" value="Maharashtra"></property>
+		<property name="country" value="India"></property>
+	</bean>
+
+
+	<bean id="emp2" class="com.pragatisoftware.bean.Employee">
+		<property name="empId" value="102"></property>
+		<property name="empName" value="Ravi Mhatre"></property>
+		<property name="address" ref="addressRef2"></property>
+	</bean>
+	<bean id="addressRef2" class="com.pragatisoftware.bean.Address">
+		<property name="line1" value="Xyz complex , opposite Star Mall"></property>
+		<property name="line2" value="LBS Marg"></property>
+		<property name="city" value="Bhandup"></property>
+		<property name="state" value="Maharashtra"></property>
+		<property name="country" value="India"></property>
+	</bean>
+
+
+
+	<bean id="emp3" class="com.pragatisoftware.bean.Employee">
+		<property name="empId" value="103"></property>
+		<property name="empName" value="Lata Gore"></property>
+		<property name="address" ref="addressRef3"></property>
+	</bean>
+	<bean id="addressRef3" class="com.pragatisoftware.bean.Address">
+		<property name="line1" value="Xyz complex , opposite Star Mall"></property>
+		<property name="line2" value="Gandhi Marg"></property>
+		<property name="city" value="Pune"></property>
+		<property name="state" value="Maharashtra"></property>
+		<property name="country" value="India"></property>
+	</bean>
+
+
+</beans>

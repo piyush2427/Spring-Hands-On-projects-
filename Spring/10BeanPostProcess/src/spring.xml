@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" "http://www.springframework.org/dtd/spring-beans-2.0.dtd" [
+<!ENTITY contextInclude SYSTEM "org/springframework/web/context/WEB-INF/contextInclude.xml">
+]>
+<!-- <beans>
+	<bean id="point" class="com.tech.infrasoft.app.Triangle"></bean>//1
+	<bean id="X" class="com.tech.infrasoft.app.Point"></bean>//1
+</beans> -->
+<!-- autowire="no/byName/byType/constructor/autodetect/default" -->
+<beans>
+   
+   
+	<bean id="line1" class="com.tech.infrasoft.bean.Line" autowire="byName">
+	
+	</bean>
+	<bean id="line2" class="com.tech.infrasoft.bean.Line" autowire="byName" >
+	
+	</bean>
+	<bean id="pointA" class="com.tech.infrasoft.bean.Point">
+	  <property name="x" value="1"></property>
+	  <property name="y" value="5"></property>    
+	</bean>
+	<bean id="pointB" class="com.tech.infrasoft.bean.Point">
+	  <property name="x" value="1"></property>
+	  <property name="y" value="2"></property>    
+	</bean>
+
+	<bean class="com.tech.infrasoft.util.UserBeanPostProcessor"></bean>
+
+</beans>

@@ -1,0 +1,31 @@
+/**
+ * 
+ */
+package com.tech.infrasoft.collectiondemo.app;
+
+import org.springframework.beans.factory.BeanFactory;
+import org.springframework.beans.factory.xml.XmlBeanFactory;
+import org.springframework.core.io.FileSystemResource;
+
+import com.tech.infrasoft.collectiondemo.util.ProductCollection;
+
+
+
+/**
+ * @author Piyush
+ *
+ */
+public class App {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		BeanFactory factory=new XmlBeanFactory(new FileSystemResource("spring.xml"));
+		ProductCollection proList=(ProductCollection) factory.getBean("proList");
+		proList.listProduct();
+
+	}
+
+}

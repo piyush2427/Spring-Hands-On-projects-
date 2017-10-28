@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" "http://www.springframework.org/dtd/spring-beans-2.0.dtd" [
+<!ENTITY contextInclude SYSTEM "org/springframework/web/context/WEB-INF/contextInclude.xml">
+]>
+<!-- <beans>
+	<bean id="point" class="com.tech.infrasoft.app.Triangle"></bean>//1
+	<bean id="X" class="com.tech.infrasoft.app.Point"></bean>//1
+</beans> -->
+
+<beans>
+	<bean id="triangle" class="com.tech.infrasoft.app.Triangle">
+	<property name="pointA" ref="pointA"></property>
+	<property name="pointB" ref="pointB"></property>
+	<property name="pointC" ref="pointC"></property>
+	</bean>
+	<bean id="pointA" class="com.tech.infrasoft.app.Point">
+	  <property name="x" value="0"></property>
+	  <property name="y" value="0"></property>    
+	</bean>
+	<bean id="pointB" class="com.tech.infrasoft.app.Point">
+	  <property name="x" value="1"></property>
+	  <property name="y" value="2"></property>    
+	</bean>
+	<bean id="pointC" class="com.tech.infrasoft.app.Point">
+	  <property name="x" value="4"></property>
+	  <property name="y" value="5"></property>    
+	</bean>
+	
+	<bean id="circle" class="com.tech.infrasoft.app.Circle">
+	<property name="center" ref="center"></property>
+	<property name="radius" value="6"></property>
+	</bean>
+	<bean id="center" class="com.tech.infrasoft.app.Point">
+	  <property name="x" value="4"></property>
+	  <property name="y" value="3"></property>    
+	</bean>
+</beans>

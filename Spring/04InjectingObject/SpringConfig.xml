@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" "http://www.springframework.org/dtd/spring-beans-2.0.dtd" [
+<!ENTITY contextInclude SYSTEM "org/springframework/web/context/WEB-INF/contextInclude.xml">
+]>
+
+<beans>
+	<bean id="emp1" class="com.tech.infrasoft.bean.Employee"> 
+	    <property name="id" value="01"></property>
+	    <property name="name" value="Piyush"></property>
+	    <property name="salary" value="99999"></property>
+	   <property name="address" ref="addr1"></property>
+	</bean>
+	<bean id="addr1" class="com.tech.infrasoft.bean.Address">
+		<property name="city" value="Ranchi"></property>
+	    <property name="state" value="Jharkhand"></property>
+	    <property name="country" value="India"></property>
+	</bean>
+	
+</beans>
