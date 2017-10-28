@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd"
+	xmlns:context="http://www.springframework.org/schema/context">
+
+
+	<bean id="line1" class="com.pragatisoftware.bean.Line" autowire="byName">
+
+	</bean>
+
+	<bean id="pointA" class="com.pragatisoftware.bean.Point">
+		<property name="x" value="10"></property>
+		<property name="y" value="10"></property>
+	</bean>
+
+
+	<bean id="pointB" class="com.pragatisoftware.bean.Point">
+		<property name="x" value="30"></property>
+		<property name="y" value="30"></property>
+	</bean>
+	
+	<bean id="circle" class="com.pragatisoftware.bean.Circle">
+		<!-- <property name="center" ref="pointA"></property> -->
+	</bean>
+	
+	<bean id="center" class="com.pragatisoftware.bean.Point">
+		<property name="x" value="10"></property>
+		<property name="y" value="20"></property>
+	</bean>
+	
+	<bean id="circleRelated" class="com.pragatisoftware.bean.Point">
+		<property name="x" value="10"></property>
+		<property name="y" value="10"></property>
+	</bean>
+	
+	<!-- <bean class="org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor"></bean> -->
+	<context:annotation-config/>
+	
+</beans> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
